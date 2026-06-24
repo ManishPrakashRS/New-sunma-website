@@ -1,0 +1,178 @@
+/* ===================== PAGE HERO (compact) ===================== */
+
+.page-hero {
+  padding: calc(80px + var(--space-5)) 0 var(--space-5);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero__canvas-wrap {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.page-hero__canvas-wrap canvas { width: 100%; height: 100%; }
+
+.page-hero .container { position: relative; z-index: 1; }
+
+.page-hero h1 {
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+  margin: var(--space-2) 0 var(--space-2);
+  max-width: 700px;
+}
+
+.page-hero p {
+  color: var(--ink-dim);
+  max-width: 560px;
+  font-size: 1.05rem;
+}
+
+/* ===================== FILTER TABS ===================== */
+
+.filter-tabs {
+  display: flex;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 600px) {
+  .filter-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.4rem;
+    margin-left: calc(-1 * var(--space-3));
+    margin-right: calc(-1 * var(--space-3));
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+  .filter-tab { flex: 0 0 auto; white-space: nowrap; }
+}
+
+.filter-tab {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  color: var(--ink-dim);
+  background: transparent;
+  transition: all 0.3s var(--ease-out);
+}
+
+.filter-tab:hover { border-color: var(--line-bright); color: var(--ink); }
+
+.filter-tab.is-active {
+  background: var(--grad-catch);
+  color: #170803;
+  border-color: transparent;
+  font-weight: 600;
+}
+
+/* ===================== FULL PRODUCT CARDS ===================== */
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.catalog-card {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  align-items: stretch;
+}
+
+.catalog-card__visual {
+  border-radius: var(--radius-sm);
+  background: linear-gradient(150deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--line);
+  overflow: hidden;
+  position: relative;
+  min-height: 220px;
+}
+
+.catalog-card__visual canvas { width: 100%; height: 100%; }
+
+.catalog-card__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-card .mono-tag { margin-bottom: var(--space-1); }
+
+.catalog-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.catalog-card p.desc {
+  color: var(--ink-dim);
+  font-size: 0.92rem;
+  margin-bottom: var(--space-2);
+  flex-grow: 0;
+}
+
+.spec-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+  margin-bottom: var(--space-2);
+  font-size: 0.85rem;
+}
+
+.spec-table .k {
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.spec-table .v { color: var(--ink); }
+
+.catalog-card__footer {
+  margin-top: auto;
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.catalog-card__footer .btn { padding: 0.6rem 1.3rem; font-size: 0.8rem; }
+
+@media (max-width: 900px) {
+  .catalog-grid { grid-template-columns: 1fr; }
+  .catalog-card { grid-template-columns: 1fr; }
+  .catalog-card__visual { min-height: 180px; }
+}
+
+@media (max-width: 420px) {
+  .catalog-card__footer { flex-wrap: wrap; }
+  .catalog-card__footer .btn { flex: 1 1 auto; justify-content: center; }
+}
+
+/* ===================== SPEC GUIDE BAND ===================== */
+
+.spec-guide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.spec-guide__item {
+  padding: var(--space-3);
+}
+
+.spec-guide__item .mono-tag { display: block; margin-bottom: var(--space-1); }
+
+.spec-guide__item h4 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+.spec-guide__item p { color: var(--ink-dim); font-size: 0.88rem; }
+
+@media (max-width: 860px) {
+  .spec-guide { grid-template-columns: 1fr; }
+}
