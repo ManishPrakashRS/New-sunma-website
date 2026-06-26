@@ -27,7 +27,7 @@
   inset: 0;
   background:
     radial-gradient(ellipse 70% 50% at 50% 100%, var(--void) 10%, transparent 60%),
-    linear-gradient(180deg, rgba(5,8,13,0.4) 0%, transparent 30%, rgba(5,8,13,0.6) 100%);
+    linear-gradient(180deg, rgba(255,255,255,0.35) 0%, transparent 30%, rgba(255,255,255,0.55) 100%);
   z-index: 1;
   pointer-events: none;
 }
