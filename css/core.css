@@ -5,23 +5,23 @@
 
 :root {
   /* Color tokens */
-  --void:        #05080d;
-  --panel:       #0d1420;
-  --panel-2:     #111a28;
-  --line:        rgba(232, 237, 242, 0.08);
-  --line-bright: rgba(255, 138, 61, 0.35);
+  --void:        #ffffff;
+  --panel:       #ffffff;
+  --panel-2:     #f7f8fa;
+  --line:        rgba(20, 24, 30, 0.10);
+  --line-bright: rgba(214, 0, 43, 0.35);
 
-  --ember:       #ff4d2e;   /* signature: the catch */
-  --ember-2:     #ff8a3d;   /* warm secondary glow */
-  --depth:       #3fd4ff;   /* cold cyan: water/depth accent, used sparingly */
-  --depth-dim:   #1f6e85;
+  --ember:       #d6002b;   /* signature: bright red */
+  --ember-2:     #ff3355;   /* warm secondary glow */
+  --depth:       #0090b8;   /* depth accent, used sparingly */
+  --depth-dim:   #006a87;
 
-  --ink:         #e8edf2;
-  --ink-dim:     #8d99a8;
-  --ink-faint:   #4c5666;
+  --ink:         #15181d;
+  --ink-dim:     #565f6b;
+  --ink-faint:   #8e96a0;
 
-  --grad-catch: linear-gradient(135deg, var(--ember) 0%, var(--ember-2) 55%, #ffb35c 100%);
-  --grad-void:  radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255, 77, 46, 0.16), transparent 60%);
+  --grad-catch: linear-gradient(135deg, var(--ember) 0%, var(--ember-2) 55%, #ff7a8c 100%);
+  --grad-void:  radial-gradient(ellipse 80% 60% at 50% -10%, rgba(214, 0, 43, 0.06), transparent 60%);
 
   /* Type */
   --font-display: 'Space Grotesk', 'Inter', sans-serif;
@@ -137,10 +137,10 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(16px) saturate(140%);
-  background: rgba(5, 8, 13, 0.55);
-  border-bottom: 1px solid var(--line);
-  transition: background 0.3s var(--ease-out);
+  background: linear-gradient(135deg, var(--ember) 0%, #b8001f 100%);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 16px rgba(214, 0, 43, 0.25);
+  transition: box-shadow 0.3s var(--ease-out);
 }
 
 .nav__brand {
@@ -151,6 +151,13 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  color: #ffffff;
+}
+
+.nav__logo {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 .nav__brand-mark {
@@ -163,7 +170,7 @@ h1, h2, h3, h4 {
   display: flex;
   gap: var(--space-4);
   font-size: 0.9rem;
-  color: var(--ink-dim);
+  color: rgba(255,255,255,0.82);
 }
 
 .nav__links a {
@@ -179,7 +186,7 @@ h1, h2, h3, h4 {
   bottom: -2px;
   width: 100%;
   height: 1px;
-  background: var(--grad-catch);
+  background: #ffffff;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s var(--ease-out);
@@ -187,7 +194,7 @@ h1, h2, h3, h4 {
 
 .nav__links a:hover,
 .nav__links a.active {
-  color: var(--ink);
+  color: #ffffff;
 }
 
 .nav__links a:hover::after,
@@ -200,19 +207,19 @@ h1, h2, h3, h4 {
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   padding: 0.6rem 1.2rem;
-  border: 1px solid var(--line-bright);
+  border: 1px solid rgba(255,255,255,0.55);
   border-radius: 100px;
-  color: var(--ink);
-  background: rgba(255, 77, 46, 0.08);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
   transition: all 0.3s var(--ease-out);
   white-space: nowrap;
 }
 
 .nav__cta:hover {
-  background: var(--ember);
-  border-color: var(--ember);
-  box-shadow: 0 0 24px rgba(255, 77, 46, 0.5);
-  color: #0a0604;
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.4);
+  color: var(--ember);
 }
 
 .nav__toggle {
@@ -226,12 +233,11 @@ h1, h2, h3, h4 {
 .nav__toggle span {
   width: 22px;
   height: 1.5px;
-  background: var(--ink);
+  background: #ffffff;
 }
 
 .nav.is-scrolled {
-  background: rgba(5, 8, 13, 0.82);
-  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px -10px rgba(214, 0, 43, 0.4);
 }
 
 @media (max-width: 860px) {
@@ -247,9 +253,9 @@ h1, h2, h3, h4 {
   max-width: 320px;
   height: 100vh;
   height: 100dvh;
-  background: rgba(8, 12, 19, 0.97);
-  backdrop-filter: blur(20px);
+  background: #ffffff;
   border-left: 1px solid var(--line);
+  box-shadow: -10px 0 40px rgba(0,0,0,0.12);
   z-index: 99;
   padding: var(--space-6) var(--space-4) var(--space-4);
   transform: translateX(100%);
@@ -270,7 +276,7 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid var(--line);
 }
 
-.mobile-menu a.active { color: var(--ember-2); }
+.mobile-menu a.active { color: var(--ember); }
 
 .nav__toggle {
   position: relative;
@@ -285,7 +291,7 @@ h1, h2, h3, h4 {
 .mobile-menu__backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
   z-index: 98;
   opacity: 0;
   pointer-events: none;
@@ -304,10 +310,10 @@ body.menu-open {
 /* ===================== GLASS CARDS ===================== */
 
 .glass {
-  background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+  background: #ffffff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  backdrop-filter: blur(20px) saturate(130%);
+  box-shadow: 0 4px 24px rgba(20, 24, 30, 0.06);
   position: relative;
   overflow: hidden;
   transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
@@ -317,7 +323,7 @@ body.menu-open {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 30%, rgba(255,138,61,0.08) 50%, transparent 70%);
+  background: linear-gradient(120deg, transparent 30%, rgba(214,0,43,0.04) 50%, transparent 70%);
   opacity: 0;
   transition: opacity 0.4s var(--ease-out);
   pointer-events: none;
@@ -326,7 +332,7 @@ body.menu-open {
 .glass:hover {
   transform: translateY(-4px);
   border-color: var(--line-bright);
-  box-shadow: 0 20px 60px -20px rgba(255, 77, 46, 0.25);
+  box-shadow: 0 20px 50px -16px rgba(214, 0, 43, 0.18);
 }
 
 .glass:hover::before { opacity: 1; }
@@ -366,7 +372,7 @@ body.menu-open {
 
 .btn--ghost:hover {
   border-color: var(--line-bright);
-  background: rgba(255,255,255,0.03);
+  background: rgba(214, 0, 43, 0.04);
 }
 
 /* ===================== SECTION RHYTHM ===================== */
@@ -542,7 +548,7 @@ section { position: relative; z-index: 1; }
 
 ::selection {
   background: var(--ember);
-  color: #0a0604;
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar { width: 10px; }
