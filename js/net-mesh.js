@@ -16,8 +16,8 @@
       spread: 1,           // overall scale of field
       autoRotate: true,
       interactive: true,
-      colorA: 0xff4d2e,
-      colorB: 0x3fd4ff,
+      colorA: 0xd6002b,
+      colorB: 0x0090b8,
       intensity: 1,
     }, opts || {});
 
